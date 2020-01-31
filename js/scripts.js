@@ -27,15 +27,10 @@ Toppings.prototype.addCheeses = function (cheese) {
 function displayOrder(pizza) {
   $('#order-size').html(pizza.size);
   pizza.toppings.forEach(function (topping) {
-    console.log('-ORDER FUNCTION-', topping)
-    if (topping === undefined) {
+    if (topping === undefined || topping === 'none') {
       console.log('caught ya')
-    } else if (topping !== undefined || topping !== 'none') {
-      console.log('-IF-', topping)
-      $('#toppings-list').append('<li>' + topping + '</li>')
     } else {
-      console.log('-ELSED-')
-
+      $('#toppings-list').append('<li>' + topping + '</li>')
     }
   });
 }
