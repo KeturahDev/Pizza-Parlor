@@ -30,6 +30,9 @@ Enjoy the similation of getting to order a pizza and see the cost at my fake piz
 * total accounts for 'extra' on toppings
   * input: selects extra cheese
   * output: price + 0.25
+* total displays as an $_.00 number
+  * input: selects 2 extra toppings
+  * output: total: $10.50
 
 
 ## Set Up 
