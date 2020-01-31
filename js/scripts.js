@@ -22,7 +22,23 @@ Toppings.prototype.addCheeses = function (cheese) {
   this.cheeses.push(cheese);
 }
 
+
 // User Interface Logic -----------------------------------------------------------
+function displayOrder(pizza) {
+  $('#order-size').html(pizza.size);
+  pizza.toppings.forEach(function (topping) {
+    console.log('-ORDER FUNCTION-', topping)
+    if (topping === undefined) {
+      console.log('caught ya')
+    } else if (topping !== undefined || topping !== 'none') {
+      console.log('-IF-', topping)
+      $('#toppings-list').append('<li>' + topping + '</li>')
+    } else {
+      console.log('-ELSED-')
+
+    }
+  });
+}
 
 $(document).ready(function () {
   $('form#pizza-order').submit(function (event) {
@@ -44,7 +60,9 @@ $(document).ready(function () {
     toppings.addCheeses(cheese)
     pizza.addToppings(toppings);
 
-
+    $('.output').show();
+    $('form#pizza-order').hide()
+    displayOrder(pizza);
     console.log('pizza size:', pizza.size);
     console.log('pizza topping:', pizza.toppings);
     console.log('order received');
