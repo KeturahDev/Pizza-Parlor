@@ -2,25 +2,28 @@
 function Pizza(size) {
   this.size = size;
   this.toppings = [];
-  this.price = 10;
+  this.price = 0;
 }
 Pizza.prototype.addToppings = function (toppings) {
   this.toppings.push(toppings.sauce, toppings.cheeses[0], toppings.peperoni, toppings.jalapeno, toppings.olives, toppings.mushroom, toppings.chicken, toppings.artichoke, toppings.pepperchini, toppings.bacon); //this array identifier is temorary
 }
-Pizza.prototype.getPrice = function () {
-  var price = this.price
-  // this.toppings.forEach(function (topping) {
-  //   if (topping === undefined || topping === 'none') {
-  //     // console.log('nulled', topping)
-  //   } else {
-  //     price = price += 1
-  //     console.log('price', price)
-  //   }
-  // });
-  price = price += 1
-  console.log('price...', price)
-  return price;
-
+Pizza.prototype.getToppingPrice = function () {
+  this.price = this.price += 1
+  return this.price;
+}
+Pizza.prototype.getSizePrice = function () {
+  if (this.size === 'small') {
+    this.price = 10;
+  } else if (this.size === 'medium') {
+    this.price = 12;
+  } else if (this.size === 'large') {
+    this.price = 14;
+  } else if (this.size === 'family') {
+    this.price = 16;
+  } else {
+    this.price = 22;
+  }
+  return this.price;
 }
 function Toppings(sauce, peperoni, jalapeno, olives, mushroom, chicken, artichoke, pepperchini, bacon) {
   this.sauce = sauce;
@@ -38,18 +41,19 @@ Toppings.prototype.addCheeses = function (cheese) {
   this.cheeses.push(cheese);
 }
 
-
 // User Interface Logic -----------------------------------------------------------
 function displayOrder(pizza) {
   $('#order-size').html(pizza.size);
+  pizza.getSizePrice()
   pizza.toppings.forEach(function (topping) {
     if (topping === undefined || topping === 'none') {
     } else {
       $('#toppings-list').append('<li>' + topping + '</li>')
-      pizza.price = pizza.getPrice()
+      pizza.price = pizza.getToppingPrice()
     }
-    console.log('pizzas price', pizza.price);
+    // console.log('pizzas price', pizza.price)
   });
+  $('#total').html('$' + pizza.price);
 }
 
 $(document).ready(function () {
@@ -67,7 +71,6 @@ $(document).ready(function () {
     var artichoke = $("input:radio[name=artichoke]:checked").val();
     var pepperchini = $("input:radio[name=pepperchini]:checked").val();
     var bacon = $("input:radio[name=bacon]:checked").val();
-    console.log('cheese', cheese)
     var toppings = new Toppings(sauce, peperoni, jalapeno, olives, mushroom, chicken, artichoke, pepperchini, bacon);
     toppings.addCheeses(cheese)
     pizza.addToppings(toppings);
