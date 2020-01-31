@@ -1,5 +1,5 @@
 # Pizza Parlor
-By Keturah Howard, January 31st 2020
+By Keturah Howard, January 31st 2020.
 
 ## Description
   
