@@ -15,6 +15,8 @@
     <h1>Pizza Parlor</h1>
     <p>Lets get you some virtual pizza, my friend.</p>
 
+    
+
     <form id="pizza-order">
       <div class="form-group">
         <label for="sizes">choose a size</label><br>
@@ -27,43 +29,98 @@
         </select>
       </div>
       <hr>
-      <h3>Sauce</h3>
-      <div class="form-group">
-        <label for="sauce">sauce</label><br> 
-        <select name="sauce" id="sauce">
-          <option value="tomato">tomato</option>
-          <option value="garlic">garlic</option>
-          <option value="alfrado">alfrado</option>
-          <option value="pesto">pesto</option>
-        </select>
+      <h3>Sauce:</h3>
+      <div class="row">
+        <div class="col-lg-4">
+          <p>red tomato with herbs</p>
+          <div class="radio">
+            <label for="amount">
+              <input type="radio" name="red" value="none">
+              none
+            </label>
+          </div>
+          <div class="radio">
+            <label for="amount">
+              <input type="radio" name="red" value="red-some">
+              some
+            </label>
+          </div>
+          <div class="radio">
+            <label for="amount">
+              <input type="radio" name="red" value="red-extra">
+              extra
+            </label>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <p>bbq</p>
+          <div class="radio">
+            <label for="amount">
+              <input type="radio" name="bbq" value="none">
+              none
+            </label>
+          </div>
+          <div class="radio">
+            <label for="amount">
+              <input type="radio" name="bbq" value="bbq-some">
+              some
+            </label>
+          </div>
+          <div class="radio">
+            <label for="amount">
+              <input type="radio" name="bbq" value="bbq-extra">
+              extra
+            </label>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <p>garlic and alfrado</p>
+          <div class="radio">
+            <label for="amount">
+              <input type="radio" name="garlic-alfrado" value="none">
+              none
+            </label>
+          </div>
+          <div class="radio">
+            <label for="amount">
+              <input type="radio" name="garlic-alfrado" value="garlic-alfrado-some">
+              some
+            </label>
+          </div>
+          <div class="radio">
+            <label for="amount">
+              <input type="radio" name="garlic-alfrado" value="garlic-alfrado-extra">
+              extra
+            </label>
+          </div>
+        </div>
       </div>
       <hr>
       <h3>Cheese:</h3>
-      <div class="form-group">
-        <p>motzerela</p>
-        <div class="radio">
-          <label for="amount">
-            <input type="radio" name="motzerela" value="none">
-            none
-          </label>
-        </div>
-        <div class="radio">
-          <label for="amount">
-            <input type="radio" name="motzerela" value="cheese-some">
-            some
-          </label>
-        </div>
-        <div class="radio">
-          <label for="amount">
-            <input type="radio" name="motzerela" value="cheese-extra">
-            extra
-          </label>
-        </div>
-      </div>
-      <hr>
       <h3>Toppings</h3>
       <div class="row">
         <div class="col-lg-3">
+          <div class="form-group">
+            <p>cheese</p>
+            <div class="radio">
+              <label for="amount">
+                <input type="radio" name="cheese" value="none">
+                none
+              </label>
+            </div>
+            <div class="radio">
+              <label for="amount">
+                <input type="radio" name="cheese" value="cheese-some">
+                some
+              </label>
+            </div>
+            <div class="radio">
+              <label for="amount">
+                <input type="radio" name="cheese" value="cheese-extra">
+                extra
+              </label>
+            </div>
+          </div>
           <div class="form-group">
             <p>Peperoni</p>
             <div class="radio">
@@ -81,27 +138,6 @@
             <div class="radio">
               <label for="amount">
                 <input type="radio" name="peperoni" value="peperoni-extra">
-                extra
-              </label>
-            </div>
-          </div>
-          <div class="form-group">
-            <p>jalapeno</p>
-            <div class="radio">
-              <label for="amount">
-                <input type="radio" name="jalapeno" value="none">
-                none
-              </label>
-            </div>
-            <div class="radio">
-              <label for="amount">
-                <input type="radio" name="jalapeno" value="jalapeno-some">
-                some
-              </label>
-            </div>
-            <div class="radio">
-              <label for="amount">
-                <input type="radio" name="jalapeno" value="jalapeno-extra">
                 extra
               </label>
             </div>
@@ -130,22 +166,22 @@
             </div>
           </div>
           <div class="form-group">
-            <p>mushroom</p>
+            <p>jalapeno</p>
             <div class="radio">
               <label for="amount">
-                <input type="radio" name="mushroom" value="none">
+                <input type="radio" name="jalapeno" value="none">
                 none
               </label>
             </div>
             <div class="radio">
               <label for="amount">
-                <input type="radio" name="mushroom" value="mushroom-some">
+                <input type="radio" name="jalapeno" value="jalapeno-some">
                 some
               </label>
             </div>
             <div class="radio">
               <label for="amount">
-                <input type="radio" name="mushroom" value="mushroom-extra">
+                <input type="radio" name="jalapeno" value="jalapeno-extra">
                 extra
               </label>
             </div>
