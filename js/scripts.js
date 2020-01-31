@@ -2,9 +2,21 @@
 function Pizza(size) {
   this.size = size;
   this.toppings = [];
+  this.price = 10;
 }
 Pizza.prototype.addToppings = function (toppings) {
   this.toppings.push(toppings.sauce, toppings.cheeses[0], toppings.peperoni, toppings.jalapeno, toppings.olives, toppings.mushroom, toppings.chicken, toppings.artichoke, toppings.pepperchini, toppings.bacon); //this array identifier is temorary
+}
+Pizza.prototype.getPrice = function () {
+  var price = this.price
+  this.toppings.forEach(function (topping) {
+    if (topping === undefined || topping === 'none') {
+      console.log('nulled', topping)
+    } else {
+      price += 1
+    }
+    return price;
+  });
 }
 function Toppings(sauce, peperoni, jalapeno, olives, mushroom, chicken, artichoke, pepperchini, bacon) {
   this.sauce = sauce;
@@ -32,6 +44,8 @@ function displayOrder(pizza) {
     } else {
       $('#toppings-list').append('<li>' + topping + '</li>')
     }
+    pizza.getPrice()
+    console.log('pizzas price', pizza.price);
   });
 }
 
@@ -58,8 +72,9 @@ $(document).ready(function () {
     $('.output').show();
     $('form#pizza-order').hide()
     displayOrder(pizza);
-    console.log('pizza size:', pizza.size);
-    console.log('pizza topping:', pizza.toppings);
-    console.log('order received');
+    // console.log('pizza size:', pizza.size);
+    // console.log('pizza topping:', pizza.toppings);
+    // console.log('order received');
+    console.log('pizza price', pizza.price);
   })
 })

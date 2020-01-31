@@ -22,11 +22,11 @@ Enjoy the similation of getting to order a pizza and see the cost at my fake piz
   * input: choose which size of pizza, then toppings, click done
   * output: 'pizza toppings: *toppings*' in console
 * user sees their order displayed when they click done
-  * input: chooses stuff, clicks done
-  * output: display 'your pizza is *pizza size* sized with *toppings listed out* toppings' + confirm button
-* user clicks confirm button to see total 
-  * input: clicks confirm
-  * output: display 'your total is *pizza total*'
+  * input: chooses stuff
+  * output: display 'your pizza is *pizza size* sized with *toppings listed out* toppings'
+* total is displayed as well 
+  * input: clicks done
+  * output: display total after 'your pizza is *pizza size* sized with *toppings listed out* toppings'
 
 
 ## Set Up 
