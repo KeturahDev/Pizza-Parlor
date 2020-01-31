@@ -3,8 +3,8 @@ By Keturah Howard, January 31st 2020.
 
 ## Description
   
-*Enjoy the similation of getting to order a pizza and see the cost at my fake pizzaria! choose a size, any toppings you desire that are available to be chosen, and get the luxery of receiving the price thhat you would have to pay, but dont! Because its not real! ahhh, the sweet feeling of saving money while also getting to costomize something. Have fun, but not too much fun!*
-*This is an Epicodus friday project designed with the purpose of testing my ability and understand of js constructors and prototypes. Thus, its probably not the most condence it can be. Prototypes are going to be everywhere. You've been warned.*
+Enjoy the similation of getting to order a pizza and see the cost at my fake pizzaria! choose a size, any toppings you desire that are available to be chosen, and get the luxery of receiving the price thhat you would have to pay, but dont! Because its not real! ahhh, the sweet feeling of saving money while also getting to costomize something. Have fun, but not too much fun!*
+*This is an Epicodus friday project designed with the purpose of testing my ability and understand of js constructors and prototypes. Thus, its probably not the most condence it can be. Prototypes are going to be everywhere. You've been warned.
 
 ## Behavioral Driven Development
   *Heres a list of the specific behaviors I wanted to be acheived throughout the development process, starting from most basic to complex.*
@@ -54,6 +54,6 @@ There are currently no known bugs, however, if there are any issues running this
 
 This HTML web page is licensed under the MIT license
 
-##Copyright
+## Copyright
 
 Copyright (c) 2020 Keturah D Howard.
