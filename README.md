@@ -9,7 +9,25 @@ By Keturah Howard, January 31st 2020
 ## Behavioral Driven Development
   *Heres a list of the specific behaviors I wanted to be acheived throughout the development process, starting from most basic to complex.*
 
-*specs here*
+* user can click order button
+  * input: click order button
+  * output: 'order received'
+* user can select size for pizza
+  * input: choose which size of pizza, click done
+  * output: 'pizza size: *size of pizza*' in console
+* user can select a topping for pizza
+  * input: choose which size of pizza, then topping, click done
+  * output: 'pizza topping: *topping*' in console
+* user can select multiple toppings for pizza
+  * input: choose which size of pizza, then toppings, click done
+  * output: 'pizza toppings: *toppings*' in console
+* user sees their order displayed when they click done
+  * input: chooses stuff, clicks done
+  * output: display 'your pizza is *pizza size* sized with *toppings listed out* toppings' + confirm button
+* user clicks confirm button to see total 
+  * input: clicks confirm
+  * output: display 'your total is *pizza total*'
+
 
 ## Set Up 
   To set up you can simply interact with the webpage by clicking [here](https://keturahdev.github.io//) to access the gh-pages for this repository. Or! To view the code and in Visual Studio and all that jazz, follow the steps bellow. 
