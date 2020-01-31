@@ -9,14 +9,18 @@ Pizza.prototype.addToppings = function (toppings) {
 }
 Pizza.prototype.getPrice = function () {
   var price = this.price
-  this.toppings.forEach(function (topping) {
-    if (topping === undefined || topping === 'none') {
-      console.log('nulled', topping)
-    } else {
-      price += 1
-    }
-    return price;
-  });
+  // this.toppings.forEach(function (topping) {
+  //   if (topping === undefined || topping === 'none') {
+  //     // console.log('nulled', topping)
+  //   } else {
+  //     price = price += 1
+  //     console.log('price', price)
+  //   }
+  // });
+  price = price += 1
+  console.log('price...', price)
+  return price;
+
 }
 function Toppings(sauce, peperoni, jalapeno, olives, mushroom, chicken, artichoke, pepperchini, bacon) {
   this.sauce = sauce;
@@ -40,11 +44,10 @@ function displayOrder(pizza) {
   $('#order-size').html(pizza.size);
   pizza.toppings.forEach(function (topping) {
     if (topping === undefined || topping === 'none') {
-      console.log('caught ya')
     } else {
       $('#toppings-list').append('<li>' + topping + '</li>')
+      pizza.price = pizza.getPrice()
     }
-    pizza.getPrice()
     console.log('pizzas price', pizza.price);
   });
 }
