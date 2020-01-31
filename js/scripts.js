@@ -2,7 +2,7 @@
 function Pizza(size) {
   this.size = size;
   this.toppings = [];
-  this.price = 0.00;
+  this.price = 0;
 }
 Pizza.prototype.addToppings = function (toppings) {
   this.toppings.push(toppings.sauce, toppings.cheese, toppings.peperoni, toppings.jalapeno, toppings.olives, toppings.mushroom, toppings.chicken, toppings.artichoke, toppings.pepperchini, toppings.bacon); //this array identifier is temorary
@@ -31,11 +31,10 @@ Pizza.prototype.getSizePrice = function () {
   return this.price;
 }
 Pizza.prototype.makePricePretty = function (price) {
-  var placeHolder = 0.00;
+  var placeHolder = 0.001;
   price = price += placeHolder;
-  // price = String(price);
-  // return price;
-  console.log('price to string?', price)
+  price = String(price).slice(0, 5);
+  return price;
 }
 function Toppings(sauce, cheese, peperoni, jalapeno, olives, mushroom, chicken, artichoke, pepperchini, bacon) {
   this.sauce = sauce;
@@ -59,10 +58,9 @@ function displayOrder(pizza) {
       $('#toppings-list').append('<li>' + topping + '</li>')
       pizza.price = pizza.getToppingPrice(topping)
     }
-    // console.log('pizzas price', pizza.price)
   });
-  $('#total').html('$' + pizza.price);
-  pizza.makePricePretty(pizza.price);
+  price = pizza.makePricePretty(pizza.price);
+  $('#total').html('$' + price);
 }
 
 $(document).ready(function () {
@@ -87,9 +85,7 @@ $(document).ready(function () {
     $('.output').show();
     $('form#pizza-order').hide()
     displayOrder(pizza);
-    // console.log('pizza size:', pizza.size);
-    // console.log('pizza topping:', pizza.toppings);
-    // console.log('order received');
+
     console.log('pizza price', pizza.price);
   })
 })
