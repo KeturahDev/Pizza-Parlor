@@ -7,8 +7,13 @@ function Pizza(size) {
 Pizza.prototype.addToppings = function (toppings) {
   this.toppings.push(toppings.sauce, toppings.cheeses[0], toppings.peperoni, toppings.jalapeno, toppings.olives, toppings.mushroom, toppings.chicken, toppings.artichoke, toppings.pepperchini, toppings.bacon); //this array identifier is temorary
 }
-Pizza.prototype.getToppingPrice = function () {
-  this.price = this.price += 1
+Pizza.prototype.getToppingPrice = function (topping) {
+  if (topping.includes('extra')) {
+    console.log('topping is extra:', topping)
+    this.price = this.price += 1.25
+  } else {
+    this.price = this.price += 1
+  }
   return this.price;
 }
 Pizza.prototype.getSizePrice = function () {
@@ -49,7 +54,7 @@ function displayOrder(pizza) {
     if (topping === undefined || topping === 'none') {
     } else {
       $('#toppings-list').append('<li>' + topping + '</li>')
-      pizza.price = pizza.getToppingPrice()
+      pizza.price = pizza.getToppingPrice(topping)
     }
     // console.log('pizzas price', pizza.price)
   });

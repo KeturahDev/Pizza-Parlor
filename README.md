@@ -27,6 +27,9 @@ Enjoy the similation of getting to order a pizza and see the cost at my fake piz
 * total is displayed as well 
   * input: clicks done
   * output: display total after 'your pizza is *pizza size* sized with *toppings listed out* toppings'
+* total accounts for 'extra' on toppings
+  * input: selects extra cheese
+  * output: price + 0.25
 
 
 ## Set Up 
