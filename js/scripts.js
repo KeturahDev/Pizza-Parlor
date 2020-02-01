@@ -9,7 +9,6 @@ Pizza.prototype.addToppings = function (toppings) {
 }
 Pizza.prototype.getToppingPrice = function (topping) {
   if (topping.includes('extra')) {
-    console.log('topping is extra:', topping)
     this.price = this.price += 1.25
   } else {
     this.price = this.price += 1
