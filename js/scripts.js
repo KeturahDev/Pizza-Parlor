@@ -5,7 +5,7 @@ function Pizza(size) {
   this.price = 0;
 }
 Pizza.prototype.addToppings = function (toppings) {
-  this.toppings.push(toppings.sauce, toppings.cheese, toppings.peperoni, toppings.jalapeno, toppings.olives, toppings.mushroom, toppings.chicken, toppings.artichoke, toppings.pepperchini, toppings.bacon); //this array identifier is temorary
+  this.toppings.push(toppings.sauce, toppings.cheese, toppings.peperoni, toppings.jalapeno, toppings.olives, toppings.mushroom, toppings.chicken, toppings.artichoke, toppings.pepperchini, toppings.bacon);
 }
 Pizza.prototype.getToppingPrice = function (topping) {
   if (topping.includes('extra')) {
@@ -68,7 +68,6 @@ $(document).ready(function () {
     event.preventDefault();
     var size = $('#size').val();
     var pizza = new Pizza(size);
-    // var sauce = $('#sauce').val();
     var sauce = $("input:radio[name=sauce]:checked").val();
     var cheese = $("input:radio[name=cheese]:checked").val();
     var peperoni = $("input:radio[name=peperoni]:checked").val();
@@ -85,7 +84,5 @@ $(document).ready(function () {
     $('.output').show();
     $('form#pizza-order').hide()
     displayOrder(pizza);
-
-    console.log('pizza price', pizza.price);
   })
 })

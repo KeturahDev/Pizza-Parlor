@@ -1,3 +1,21 @@
+body{
+  background-image: linear-gradient(to right bottom, #ff8558, #ff955a, #ffa45d, #ffb364, #ffc16c, #ffc16c, #ffc06d, #ffc06d, #ffb066, #ffa061, #fe905f, #fb7f5f);
+  padding: 5%;
+}
+form{
+  padding: 2%;
+  text-align: center;
+}
+h4{
+  text-align: left;
+}
+
+.jumbotron {
+  text-align: center;
+  background:transparent !important;
+  font-size: 110%;
+  /* font-weight: 900; */
+}
 .output {
   display: none;
 }

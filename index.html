@@ -12,12 +12,16 @@
 </head>
 <body>
   <div class="container">
+    <div class="jumbotron">
     <h1>Pizza Parlor</h1>
     <p>Lets get you some virtual pizza, my friend.</p>
+  </div>
+    
 
     
 
-    <form id="pizza-order">
+    <form id="pizza-order" class="card">
+      <div class="card-body">
       <div class="form-group">
         <label for="sizes">choose a size</label><br>
         <select name="size" id="size">
@@ -29,7 +33,7 @@
         </select>
       </div>
       <hr>
-      <h3>Sauce:</h3>
+      <h4 class="card-title">Sauce:</h4>
       <div class="row">
         <div class="col-lg-4">
           <p>red tomato with herbs</p>
@@ -96,7 +100,7 @@
         </div>
       </div>
       <hr>
-      <h3>Toppings</h3>
+      <h4 class="card-title">Toppings</h4>
       <div class="row">
         <div class="col-lg-3">
           <div class="form-group">
@@ -275,6 +279,7 @@
           </div>
         </div>
       </div>
+    </div>
       <button class="btn btn-danger"type="submit">Order</button>
     </form>
 
