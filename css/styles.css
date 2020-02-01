@@ -1,6 +1,8 @@
 body{
   background-image: linear-gradient(to right bottom, #ff8558, #ff955a, #ffa45d, #ffb364, #ffc16c, #ffc16c, #ffc06d, #ffc06d, #ffb066, #ffa061, #fe905f, #fb7f5f);
   padding: 5%;
+  color: rgb(131, 0, 0);
+  margin-bottom: 20%;
 }
 form{
   padding: 2%;
@@ -8,13 +10,29 @@ form{
 }
 h4{
   text-align: left;
+  color: rgb(187, 0, 0);
 }
-
+img{
+  max-height: 100px;
+}
+.floatL{
+  float: left;
+}
+.floatR{
+  float: right;
+}
 .jumbotron {
   text-align: center;
   background:transparent !important;
   font-size: 110%;
+  color: rgb(0, 0, 0);
   /* font-weight: 900; */
+}
+.card {
+  text-align: center; 
+}
+.row{
+  text-align: center;
 }
 .output {
   display: none;
