@@ -12,13 +12,12 @@ h4{
   text-align: left;
   color: rgb(187, 0, 0);
 }
-img{
-  max-height: 100px;
-}
 .floatL{
+  max-height: 100px;
   float: left;
 }
 .floatR{
+  max-height: 100px;
   float: right;
 }
 .jumbotron {
@@ -26,7 +25,6 @@ img{
   background:transparent !important;
   font-size: 110%;
   color: rgb(0, 0, 0);
-  /* font-weight: 900; */
 }
 .card {
   text-align: center; 
@@ -36,4 +34,11 @@ img{
 }
 .output {
   display: none;
+}
+.smol{
+  max-height: 200px;
+}
+.squish{
+  margin-left: 18%;
+  margin-right: 18%;
 }
