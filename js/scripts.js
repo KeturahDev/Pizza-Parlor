@@ -48,7 +48,7 @@ function Toppings(sauce, cheese, peperoni, jalapeno, olives, mushroom, chicken, 
   this.pepperchini = pepperchini;
   this.bacon = bacon;
 }
-// User Interface Logic -----------------------------------------------------------
+// User Interface Logic -------------------------------------------------------------------------------------
 function displayOrder(pizza) {
   $('#order-size').html(pizza.size);
   pizza.getSizePrice()

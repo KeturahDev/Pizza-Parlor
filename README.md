@@ -36,16 +36,16 @@ Enjoy the similation of getting to order a pizza and see the cost at my fake piz
 
 
 ## Set Up 
-  To set up you can simply interact with the webpage by clicking [here](https://keturahdev.github.io//) to access the gh-pages for this repository. Or! To view the code and in Visual Studio and all that jazz, follow the steps bellow. 
+  To set up you can simply interact with the webpage by clicking [here](https://keturahdev.github.io/Pizza-Parlor/) to access the gh-pages for this repository. Or! To view the code and in Visual Studio and all that jazz, follow the steps bellow. 
   1. Click on the *clone or download* button of this repository. You can download the project file clicking the **"Download Zip"** button, double clicking the file in downloads, and navigating to the index.html file and double clicking that. *Or*, you can copy the link that pops up when you've clicked the *clone or download* button above this README.md file.
   2. Navigate to your terminal, where you have previously installed git (if you have not done this yet, go ahead and do so now).
-  3. In terminal, change your directory to desktop, and then type **"git clone "**.
+  3. In terminal, change your directory to desktop, and then type **"git clone https://github.com/KeturahDev/Pizza-Parlor"**.
   4. When you've pressed enter, my project will be cloned onto your desktop, and now you can change directory into it and type **"code ."** to open the projects files in Visual Studio Code!
 
 ## Technologies Used
 * jQuery
 * JavaScript
-* Bootstrap version 4.0.0.
+* Bootstrap version 4.4.1.
 * Visual Studio Code
 * HTML
 * CSS
